@@ -1,0 +1,27 @@
+.title {
+  display: flex;
+  font-size: 28px;
+  line-height: 40px;
+  font-weight: bold;
+
+  letter-spacing: -0.6px;
+
+  color: $textStrong;
+
+  &::before {
+    position: relative;
+    left: -16px;
+    top: 0;
+
+    width: 4px;
+    height: 40px;
+
+    border-radius:  0 5px 5px 0;
+    background: #41F6D7;
+    content: "";
+  }
+
+  &--padding {
+    padding: 24px 16px;
+  }
+}

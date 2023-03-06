@@ -1,7 +1,10 @@
-$mainBgColor: #F8F8F8;
-$white: #ffffff;
+$mainBgColor:       #F8F8F8;
+$white:             #ffffff;
+$textStrong:        #1B1C21;
+$highLightColor:    #41F6D7;
+$linearGradientToEnd: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
 
 
-$z-index-sidebar: 1000;
-$z-index-header:  1000;
-$z-index-modal:  2000;
+$z-index-sidebar:  2;
+$z-index-header:   1;
+$z-index-modal:    3;
