@@ -2,15 +2,82 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <title>CPS</title>
   </head>
   <body>
-    <img src="./img/webpack.svg" alt="Webpack Logo" width="200px" />
-    <h3>Welcome to Webpack 4 starter </h3>
+    <div class="page" id="page">
+      <header class="header">
+        <ul class="header__menu">
+          <li class="burger">
+            <button class="button" type="button" id="sidebarToggle">
+                <img src="./img/header/burger-opener.svg">
+            </button>
+          </li>
+
+          <li class="logo">
+            <a href="#">
+                <img class="logo__image" src="./img/header/logo.svg" alt="Логотип CPS">
+            </a>
+          </li>
+
+          <li class="feedback">
+            <ul class="feedback-list">
+                <li class="feedback-list__item">
+                  <button class="button">
+                    <img src="./img/header/call.svg" alt="Позвонить">
+                  </button>
+                </li>
+                <li class="feedback__item">
+                    <button class="button">
+                        <span class="bgc-figure">
+                            <img src="./img/header/chat.svg" alt="Чат">
+                        </span>
+                    </button>
+                </li>
+                <li class="feedback__item">
+                    <button class="button">
+                        <span class="bgc-figure">
+                            <img src="./img/header/profile.svg" alt="Профиль">
+                        </span>
+                    </button>
+                </li>
+            </ul>
+          </li>
+
+          <li class="support">
+            <ul class="support__list">
+              <li class="support__item">
+                <span class="support__text">Оставить заявку</span>
+                  <button class="button">
+                          <img src="./img/header/repair.svg" alt="Оставить заявку">
+                  </button>
+              </li>
+              <li class="support__item">
+                <span class="support__text">Статус ремонта</span>
+                <button class="button">
+                  <img src="./img/header/check.svg" alt="Проверить статус ремонта">
+                </button>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </header> <!-- /.header -->
+
+      
+
+      <aside class="sidebar">
+        Sidebar
+      </aside>
+
+      <main class="main">
+        BODY
+      </main>
+
+      <footer class="footer">
+        Footer
+      </footer>
+    </div>
   </body>
 </html>

@@ -1,0 +1,25 @@
+.support {
+  display: flex;
+  position: absolute;
+  right: 0;
+  transform: translateX(-16px);
+
+  &__list {
+
+    display: flex;
+    gap: 16px;
+
+    .support__text {
+      display: none;
+    }
+
+  }
+
+  &::before {
+    @extend %divider;
+  }
+
+
+
+
+}

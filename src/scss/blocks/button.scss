@@ -1,0 +1,7 @@
+.button {
+  @extend %pink-circle;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,22 @@
+%pink-circle {
+  min-width: 40px;
+  min-height: 40px;
+
+  background-color: #FF3E79;
+  border-radius: 50%;
+}
+
+%divider {
+  position: relative;
+  left: -16px;
+  top: 5px;
+  width: 2px;
+  height: 32px;
+  margin-left: 40px;
+
+  background: #EAEAEA;
+  border-radius: 1px;
+  text-align: center;
+
+  content: "";
+}

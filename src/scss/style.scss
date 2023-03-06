@@ -1,17 +1,36 @@
-$bgColor: #24292e;
-$text: #fff;
+@import '../fonts/fonts.css';
 
-@font-face {
-  font-family: 'Comic';
-  src: url('../fonts/comic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-}
+@import 'vars';
+@import 'mixins';
+@import 'extend';
+@import 'vendor/reset';
 
 body {
-  padding: 1rem;
-  margin: 0;
-  font-family: Comic, sans-serif;
-  background-color: $bgColor;
-  color: $text;
+  font-family: 'TT Lakes', sans-serif;
 }
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+button:focus,
+button:active,
+button:enabled,
+button:hover {
+  outline: none;
+  border: none;
+}
+
+
+
+/* Blocks */
+
+@import 'blocks/page';
+@import 'blocks/header';
+@import 'blocks/button';
+@import 'blocks/logo';
+@import 'blocks/feedback';
+@import 'blocks/support';
+@import 'blocks/sidebar';
