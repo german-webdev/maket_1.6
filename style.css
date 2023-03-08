@@ -686,24 +686,20 @@ body {
 
 .price .price__info-box .price__offer {
   display: inline-block;
-  position: relative;
   font-size: 16px;
   line-height: 24px;
   font-weight: 500;
   letter-spacing: -0.2px;
   color: #1B1C21; }
+  .price .price__info-box .price__offer .price__offer-arrow {
+    position: relative; }
+    .price .price__info-box .price__offer .price__offer-arrow::after {
+      position: absolute;
+      right: -15px;
+      top: 1px;
+      content: url(./static/line.svg); }
   .price .price__info-box .price__offer--padding--xs {
     padding: 16px 0 0 0; }
-  .price .price__info-box .price__offer::after {
-    position: absolute;
-    left: 111.4px;
-    bottom: 8px;
-    width: 6px;
-    height: 6px;
-    border-left: 2px solid #FF3E79;
-    border-top: 2px solid #FF3E79;
-    transform: rotate(135deg);
-    content: ''; }
 
 .order {
   display: flex;
