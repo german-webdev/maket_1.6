@@ -8,22 +8,17 @@ export default function priceSwiper() {
       if (!init) {
         init = true;
         let swiper = new Swiper(".price__grid", {
-            direction: 'horizontal',
-            width: 320,
-            spaceBetween: 16,
-            slidesPerView: 1.215,
-            speed: 400,
-            cssMode: true,
+          direction: 'horizontal',
+          width: 320,
+          spaceBetween: 16,
+          slidesPerView: 1.215,
+          speed: 300,
+          cssMode: true,
 
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-
-            mousewheel: {
-              sensitivity: 1,
-              eventsTarget: '.swiper'
-            },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
         });
       }
     } else if (init) {

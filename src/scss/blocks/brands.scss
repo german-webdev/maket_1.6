@@ -28,17 +28,6 @@
         }
       }
 
-      &::after {
-        content: "";
-        position: absolute;
-        top: 11px;
-        right: 0;
-        z-index: 1000;
-        width: 24px;
-        height: 81px;
-        background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
-      }
-
       @include breakpoint(768px) {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
@@ -59,6 +48,18 @@
           transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
         }
       }
+      
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 11px;
+      right: 0;
+      z-index: 1000;
+      width: 24px;
+      height: 81px;
+      background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
     }
 
     .brands__button {
