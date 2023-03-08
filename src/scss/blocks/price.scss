@@ -19,8 +19,6 @@
     }
   }
 
-
-
   .price__info-box {
 
     &--padding--xs {
@@ -39,7 +37,7 @@
 
     .price__offer {
       display: inline-block;
-      position: relative;
+
       font-size: 16px;
       line-height: 24px;
       font-weight: 500;
@@ -48,25 +46,24 @@
 
       color: $textPrimary;
 
+      .price__offer-arrow {
+        position: relative;
+
+        &::after {
+          position: absolute;
+          right: -15px;
+          top: 1px;
+          
+          content: url(../img/price/line.svg);
+        }
+      }
+
       &--padding--xs {
         padding: 16px 0 0 0;
       }
 
-      &::after {
-        position: absolute;
-        left: 111.4px;
-        bottom: 8px;
-        width: 6px;
-        height: 6px;
-        border-left: 2px solid #FF3E79;
-        border-top: 2px solid #FF3E79;
-
-        transform: rotate(135deg);
 
 
-
-        content: '';
-      }
     }
 
   }
