@@ -1,0 +1,72 @@
+.brands {
+  background: #f2f2f2;
+
+  &__grid {
+    height: 140px;
+
+    .brands__list {
+      //**************
+      position: relative;
+
+      .brands__item {
+        padding-top: 16px;
+
+        .brands__link {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          max-width: 240px;
+          height: 72px;
+
+          padding: 16px;
+          margin-left: 16px;
+
+          background: #ffffff;
+          border: 1px solid #eaeaea;
+          border-radius: 6px;
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 11px;
+        right: 0;
+        z-index: 1000;
+        width: 24px;
+        height: 81px;
+        background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+      }
+
+      @include breakpoint(768px) {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+        grid-template-rows: repeat(3, 72px);
+        column-gap: 32px;
+        row-gap: 16px;
+
+        padding: 24px 32px;
+        overflow-x: hidden;
+
+        transition: max-height 0.3s cubic-bezier(1, 0, 1, 0);
+
+        &--hidden {
+          max-height: 190px;
+          overflow-x: hidden;
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+          transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+        }
+      }
+    }
+
+    .brands__button {
+      display: none;
+
+      @include breakpoint(768px) {
+        display: flex;
+      }
+    }
+  }
+}

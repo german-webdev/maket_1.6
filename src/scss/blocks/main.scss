@@ -1,3 +1,33 @@
 .main {
   background: $mainBgColor;
+
+  &__title {
+    display: flex;
+    font-size: 28px;
+    line-height: 40px;
+    font-weight: bold;
+
+    letter-spacing: -0.6px;
+
+    color: $textPrimary;
+
+    &::before {
+      position: relative;
+      left: -16px;
+      top: 0;
+
+      width: 4px;
+      height: 40px;
+
+      border-radius:  0 5px 5px 0;
+      background: #41F6D7;
+      content: "";
+    }
+
+    &--padding--xs {
+      padding: 24px 16px;
+    }
+  }
+
+
 }

@@ -1,0 +1,26 @@
+.button-order {
+  position: absolute;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  width: 119px;
+  height: 32px;
+
+  padding: 0 12px;
+
+  background: #FF3E79;
+  border-radius: 16px;
+
+  &__text {
+    font-size: 12px;
+    line-height: 24px;
+    font-weight: bold;
+
+
+    letter-spacing: -0.15px;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+  }
+}
