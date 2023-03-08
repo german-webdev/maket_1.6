@@ -9,9 +9,9 @@
   <link href="style.css" rel="stylesheet"></head>
   <body>
     <div class="page" id="page">
-      <header class="header">
+      <header class="header header--mb--xs">
         <ul class="header__menu">
-          <li class="burger">
+          <li class="burger burger--active">
             <button class="button" type="button" id="sidebarToggle">
               <img src="./img/header/burger-opener.svg">
             </button>
@@ -67,7 +67,101 @@
       </header>
       
 
-      <aside class="sidebar"> Sidebar </aside>
+      <aside class="sidebar sidebar--active">
+        <ul class="burger-menu__header">
+
+          <li>
+              <button class="button sidebar__search-form">
+                  <span class="button__mod--pink-circle">
+                      <img src="images/search.svg" class="search-form__icon">
+                  </span>
+              </button>
+          </li>
+        </ul>
+        <nav class="sidebar__nav">
+          <ul class="burger-menu__nav-list">
+              <li class="burger-menu__nav-item burger-menu__nav-item--active">
+                  <a class="burger-menu__nav-link" href="#">
+                      Ремонт техники
+                  </a>
+              </li>
+              <li class="burger-menu__nav-item">
+                  <a class="burger-menu__nav-link" href="#">
+                      Услуги и сервисы
+                  </a>
+              </li>
+              <li class="burger-menu__nav-item">
+                  <a class="burger-menu__nav-link" href="#">
+                      Корпоративным клиентам
+                  </a>
+              </li>
+              <li class="burger-menu__nav-item">
+                  <a class="burger-menu__nav-link" href="#">
+                      Продавцам техники
+                  </a>
+              </li>
+              <li class="burger-menu__nav-item">
+                  <a class="burger-menu__nav-link" href="#">
+                      Партнерам
+                  </a>
+              </li>
+              <li class="burger-menu__nav-item">
+                  <a class="burger-menu__nav-link" href="#">
+                      Производителям
+                  </a>
+              </li>
+              <li class="burger-menu__nav-item">
+                  <a class="burger-menu__nav-link" href="#">
+                      Наши сервисные центры
+                  </a>
+              </li>
+              <li class="burger-menu__nav-item">
+                  <a class="burger-menu__nav-link" href="#">
+                      Контакты
+                  </a>
+              </li>
+          </ul>
+      </nav>
+
+      <ul class="burger-menu__footer">
+          <li class="feedback">
+              <ul class="feedback__list">
+                  <li class="feedback__item">
+                      <button class="button">
+                          <span class="button__mod--pink-circle">
+                              <img src="images/call.svg" class="search-form__icon">
+                          </span>
+                      </button>
+                  </li>
+                  <li class="feedback__item">
+                      <button class="burger-btn">
+                          <span class="button__mod--pink-circle">
+                              <img src="images/chat.svg" class="search-form__icon">
+                          </span>
+                      </button>
+                  </li>
+                  <li class="feedback__item">
+                      <button class="burger-btn">
+                          <span class="button__mod--pink-circle">
+                              <img src="images/profile.svg" class="search-form__icon">
+                          </span>
+                      </button>
+                  </li>
+              </ul>
+          </li>
+
+          <li class="e-mail"><a href="mailto:mail@cps.com">mail@cps.com</a></li>
+          <li class="phone"><a href="tel:8 800 890 8900">8 800 890 8900</a></li>
+          <li class="language">
+              <ul class="language__list">
+                  <li class="language__item language__item--active"><a href="#" lang="ru">RU</a></li>
+                  <li class="language__item"><a href="#" lang="en">EN</a></li>
+                  <li class="language__item"><a href="#" lang="ch">CH</a></li>
+              </ul>
+          </li>
+        </ul>
+
+      </aside>
 
       <main class="main">
         <h1 class="title main__title main__title--padding--xs">Услуги и сервисы</h1>
