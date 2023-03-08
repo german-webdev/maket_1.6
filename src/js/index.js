@@ -8,8 +8,10 @@ import moreToggle from '../js/moreToggle.js';
 
 console.log('Works!')
 
-// window.addEventListener('resize', kindsSwiper());
+window.addEventListener('resize', priceSwiper());
 window.addEventListener('load', priceSwiper());
+window.addEventListener('resize', brandsSwiper());
 window.addEventListener('load', brandsSwiper());
+window.addEventListener('resize', kindsSwiper());
 window.addEventListener('load', kindsSwiper());
 

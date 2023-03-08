@@ -2,7 +2,7 @@
   display: flex;
   gap: 16px;
   justify-content: space-between;
-  align-items: end;
+  align-items: flex-end;
 
   width: 260px;
   height: 200px;
@@ -22,8 +22,6 @@
     .order__title {
       font-size: 14px;
       line-height: 16px;
-      /* identical to box height, or 114% */
-
 
       color: $textSecondary;
 
