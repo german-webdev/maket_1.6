@@ -69,6 +69,9 @@ button:hover {
   outline: none;
   border: none; }
 
+ul, ol {
+  list-style: none; }
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -443,20 +446,27 @@ body {
   flex-direction: column;
   width: 320px;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 2000;
   background: #FFFFFF;
   box-shadow: -2px 0px 4px 0 rgba(69, 79, 126, 0.02), 16px 0px 52px 0 rgba(14, 24, 80, 0.2);
   transform: translateX(-1000px);
-  transition: all 0.5s ease-in; }
+  transition: transform 0.5s ease-in; }
   .sidebar--active {
     transform: translateX(0px);
-    transition: all 0.5s ease-out; }
+    transition: transform 0.5s ease-out; }
+  .sidebar__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; }
 
 .sidebar__search-form {
-  display: none; }
+  position: relative;
+  right: 16px;
+  top: 24px;
+  margin: 0 0 0 auto; }
 
 .burger {
   position: relative;
@@ -777,6 +787,42 @@ body {
     letter-spacing: -0.15px;
     text-transform: uppercase;
     color: #FFFFFF; }
+
+.nav-sidebar {
+  flex-grow: 1;
+  position: relative;
+  top: 55px; }
+  .nav-sidebar__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; }
+    .nav-sidebar__list .nav-sidebar__item {
+      display: flex;
+      align-items: center;
+      height: 32px; }
+      .nav-sidebar__list .nav-sidebar__item .nav-sidebar__link {
+        display: block;
+        font-family: 'TT Lakes', sans-serif;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        padding: 0 0 0 20px;
+        color: #1B1C21; }
+      .nav-sidebar__list .nav-sidebar__item::before {
+        display: block;
+        width: 4px;
+        height: 32px;
+        position: relative;
+        left: 0;
+        top: 0;
+        border-radius: 0 5px 5px 0;
+        background: #41F6D7;
+        content: "";
+        opacity: 0; }
+      .nav-sidebar__list .nav-sidebar__item:hover::before, .nav-sidebar__list .nav-sidebar__item--active::before {
+        opacity: 1; }
+      .nav-sidebar__list .nav-sidebar__item:hover > .nav-sidebar__link, .nav-sidebar__list .nav-sidebar__item--active > .nav-sidebar__link {
+        color: #7E7E82; }
 
 .footer {
   display: flex;
