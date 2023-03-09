@@ -4,10 +4,11 @@
 
   width: 320px;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 2000;
+
 
   background: #FFFFFF;
   box-shadow:
@@ -15,19 +16,27 @@
       16px 0px 52px 0 rgba(14, 24, 80, 0.2);
 
   transform: translateX(-1000px);
-  transition: all 0.5s ease-in;
+  transition: transform 0.5s ease-in;
 
   &--active {
     transform: translateX(0px);
-    transition: all 0.5s ease-out;
+    transition: transform 0.5s ease-out;
   }
 
-  // &__nav {
-  //   position: relative;
-  //   top: 100px;
-  // }
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+
+
+
 }
 
 .sidebar__search-form {
-  display: none;
+  position: relative;
+  right: 16px;
+  top: 24px;
+  margin: 0 0 0 auto;
 }

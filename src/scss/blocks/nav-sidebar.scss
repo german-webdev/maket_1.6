@@ -1,0 +1,57 @@
+.nav-sidebar {
+  flex-grow: 1;
+
+  position: relative;
+  top: 55px;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+
+    .nav-sidebar__item {
+      display: flex;
+      align-items: center;
+      height: 32px;
+
+      .nav-sidebar__link {
+        display: block;
+        font-family: 'TT Lakes', sans-serif;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        padding: 0 0 0 20px;
+
+        color: $textPrimary;
+      }
+
+      &::before {
+        display: block;
+        width: 4px;
+        height: 32px;
+        position: relative;
+        left: 0;
+        top: 0;
+
+        border-radius:  0 5px 5px 0;
+
+        background: $highLightColor;
+        content: "";
+        opacity: 0;
+      }
+
+      &:hover::before,
+      &--active::before {
+        opacity: 1;
+      }
+
+      &:hover,
+      &--active {
+        > .nav-sidebar__link {
+          color: $textSecondary;
+        }
+      }
+    }
+  }
+}
