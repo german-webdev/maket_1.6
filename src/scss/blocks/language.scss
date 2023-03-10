@@ -1,0 +1,25 @@
+.language {
+
+  &__list {
+    display: flex;
+    gap: 7px;
+
+    .language__link {
+      @extend %typeset-medium;
+
+      &--active,
+      &:hover,
+      &:active {
+        color: $textSecondary;
+      }
+    }
+  }
+
+  &--margin--xs {
+    margin: 0 0 32px 0;
+  }
+
+  &--padding--xs {
+    padding: 0 16px;
+  }
+}

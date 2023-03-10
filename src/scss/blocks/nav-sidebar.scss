@@ -2,12 +2,12 @@
   flex-grow: 1;
 
   position: relative;
-  top: 55px;
+  top: 50px;
 
   &__list {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 16px;
 
 
     .nav-sidebar__item {
@@ -16,14 +16,11 @@
       height: 32px;
 
       .nav-sidebar__link {
-        display: block;
-        font-family: 'TT Lakes', sans-serif;
-        font-size: 16px;
-        line-height: 24px;
-        letter-spacing: -0.2px;
-        padding: 0 0 0 20px;
+        @extend %typeset-medium;
 
-        color: $textPrimary;
+        display: block;
+
+        padding: 0 0 0 16px;
       }
 
       &::before {
@@ -37,8 +34,9 @@
         border-radius:  0 5px 5px 0;
 
         background: $highLightColor;
-        content: "";
         opacity: 0;
+
+        content: "";
       }
 
       &:hover::before,

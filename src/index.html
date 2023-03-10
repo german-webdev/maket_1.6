@@ -18,9 +18,10 @@
     <div class="page" id="page">
       <header class="header header--mb--xs">
         <ul class="header__menu">
-          <li class="burger burger--active">
-            <button class="button" type="button" id="sidebarToggle">
-              <img src="./img/header/burger-opener.svg" />
+          <li class="burger">
+            <button class="button burger__button" type="button" id="sidebarToggle">
+                <img class="burger__opener" src="./img/burger/burger-opener.svg" />
+                <img class="burger__close" src="./img/burger/burger-close.svg" />
             </button>
           </li>
 
@@ -35,7 +36,7 @@
           </li>
 
           <li class="feedback">
-            <ul class="feedback-list">
+            <!-- <ul class="feedback-list">
               <li class="feedback-list__item">
                 <button class="button">
                   <img src="./img/header/call.svg" alt="Позвонить" />
@@ -55,7 +56,7 @@
                   </span>
                 </button>
               </li>
-            </ul>
+            </ul> -->
           </li>
 
           <li class="support">
@@ -81,7 +82,7 @@
       </header>
       <!-- /.header -->
 
-      <aside class="sidebar sidebar--active">
+      <aside class="sidebar">
         <ul class="sidebar__header">
           <li>
               <button class="button sidebar__search-form">
@@ -91,12 +92,12 @@
         </ul>
         <nav class="nav-sidebar">
           <ul class="nav-sidebar__list">
-            <li class="nav-sidebar__item">
+            <li class="nav-sidebar__item nav-sidebar__item--active">
               <a class="nav-sidebar__link" href="#">
                 Ремонт техники
               </a>
             </li>
-            <li class="nav-sidebar__item  nav-sidebar__item--active">
+            <li class="nav-sidebar__item">
               <a class="nav-sidebar__link" href="#">
                 Услуги и сервисы
               </a>
@@ -135,35 +136,35 @@
         </nav>
 
         <div class="sidebar__footer">
-          <div class="feedback">
+          <div class="feedback feedback--margin--xs feedback--padding--xs">
             <ul class="feedback__list">
               <li class="feedback__item">
                 <button class="button">
-                  <img src="images/call.svg" class="search-form__icon">
+                  <img src="./img/feedback/call.svg" class="search-form__icon">
                 </button>
               </li>
               <li class="feedback__item">
                 <button class="button">
-                  <img src="images/chat.svg" class="search-form__icon">
+                  <img src="./img/feedback/chat.svg" class="search-form__icon">
                 </button>
               </li>
               <li class="feedback__item">
                 <button class="button">
-                  <img src="images/profile.svg" class="search-form__icon">
+                  <img src="./img/feedback/profile.svg" class="search-form__icon">
                 </button>
               </li>
             </ul>
           </div>
 
-          <div class="contacts">
+          <div class="contacts contacts--margin--xs contacts--padding--xs">
             <a class="contacts__e-mail" href="mailto:mail@cps.com">mail@cps.com</a>
             <a class="contacts__phone" href="tel:8 800 890 8900">8 800 890 8900</a>
           </div>
-          <div class="language">
+          <div class="language language--margin--xs language--padding--xs">
             <ul class="language__list">
-              <li class="language__item language__item--active"><a href="#" lang="ru">RU</a></li>
-              <li class="language__item"><a href="#" lang="en">EN</a></li>
-              <li class="language__item"><a href="#" lang="ch">CH</a></li>
+              <li><a class="language__link language__link--active" href="#" lang="ru">RU</a></li>
+              <li><a class="language__link" href="#" lang="en">EN</a></li>
+              <li><a class="language__link" href="#" lang="ch">CH</a></li>
             </ul>
           </div>
         </div>

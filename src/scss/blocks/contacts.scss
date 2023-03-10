@@ -1,0 +1,21 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  &__e-mail {
+    @extend %typeset-medium;
+  }
+
+  &__phone {
+    @extend %typeset-bold;
+  }
+
+  &--margin--xs {
+    margin: 0 0 8px 0;
+  }
+
+  &--padding--xs {
+    padding: 0 16px;
+  }
+}

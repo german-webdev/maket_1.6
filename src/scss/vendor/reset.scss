@@ -15,6 +15,7 @@ button:enabled,
 button:hover {
   outline: none;
   border: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 ul, ol {

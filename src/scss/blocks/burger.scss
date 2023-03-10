@@ -5,4 +5,48 @@
   left: 0;
   z-index: 2100;
 
+  .burger__button {
+    position: inherit;
+
+    .burger__close {
+      position: absolute;
+
+      transform: translateX(-100px);
+      opacity: 0;
+      transition: all 0.5s ease-in;
+    }
+
+    .burger__opener {
+      transform: translateX(0);
+      opacity: 1;
+
+      transition: all 0.5s ease-out;
+    }
+
+    &--active {
+
+      .burger__close {
+        transform: translateX(0);
+        opacity: 1;
+        transition: all 0.5s ease-out;
+      }
+
+      .burger__opener {
+        transform: translateX(100px);
+        opacity: 0;
+
+        transition: all 0.5s ease-in;
+      }
+
+
+
+    }
+
+
+
+
+
+  }
+
+
 }

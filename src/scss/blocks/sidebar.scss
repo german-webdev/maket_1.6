@@ -2,8 +2,9 @@
   display: flex;
   flex-direction: column;
 
-  width: 320px;
+  min-width: 100%;
   height: 100vh;
+
   position: fixed;
   top: 0;
   left: 0;
@@ -21,12 +22,16 @@
   &--active {
     transform: translateX(0px);
     transition: transform 0.5s ease-out;
+
+    // .feedback {
+    //   display: block;
+
+    //   transition: display 0.5s ease-in;
+    // }
   }
 
   &__footer {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    display: block;
   }
 
 

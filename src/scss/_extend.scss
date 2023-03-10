@@ -20,3 +20,26 @@
 
   content: "";
 }
+
+%typeset-medium {
+  font-family: 'TT Lakes', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+
+  letter-spacing: -0.2px;
+
+  color: $textPrimary;
+}
+
+%typeset-bold {
+  font-family: 'TT Lakes', sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: bold;
+
+  letter-spacing: -0.6px;
+
+  color: $textPrimary;
+
+}
