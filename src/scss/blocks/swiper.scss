@@ -3,6 +3,13 @@
   left: 0;
   top: 0;
 
+  .swiper-slide:last-child {
+    margin-right: 16px;
+
+    @include breakpoint(768px) {
+      margin: 0;
+    }
+  }
 
 
   .swiper-pagination {
@@ -16,5 +23,9 @@
     font-size: 12px;
     color: #DDDDDD;
     background: #B5B6BC;
+  }
+
+  @include breakpoint(768) {
+    all: unset;
   }
 }

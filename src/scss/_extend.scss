@@ -7,9 +7,6 @@
 }
 
 %divider {
-  position: relative;
-  left: -20px;
-  top: 5px;
   width: 2px;
   height: 32px;
   margin-left: 40px;
@@ -19,6 +16,17 @@
   text-align: center;
 
   content: "";
+}
+
+%typeset-normal {
+  font-family: 'TT Lakes', sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+
+  letter-spacing: 0.2px;
+
+  color: $textPrimary;
 }
 
 %typeset-medium {

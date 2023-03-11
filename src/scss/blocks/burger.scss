@@ -1,9 +1,11 @@
 .burger {
-
+  display: flex;
   position: relative;
   top: 0;
   left: 0;
   z-index: 2100;
+
+  transform: translateX(0px);
 
   .burger__button {
     position: inherit;
@@ -37,16 +39,7 @@
 
         transition: all 0.5s ease-in;
       }
-
-
-
     }
-
-
-
-
-
   }
-
 
 }

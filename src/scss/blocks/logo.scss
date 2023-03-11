@@ -1,6 +1,47 @@
 .logo {
+  display: flex;
   position: relative;
   top: 0;
   left: 0;
   z-index: 4000;
+
+  transform: translateX(0px);
+  transition: transform 0.2s linear;
+
+  &--transform {
+    transform: translateX(0);
+    transition: transform 0.2s linear;
+  }
+
+  &.logo--opacity::before {
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+  }
+
+  &::before {
+    @extend %divider;
+    position: absolute;
+    top: 11px;
+    left: -60.73px;
+
+
+    opacity: 1;
+    transition: opacity 0.3s ease-in;
+    display: none;
+
+    @include breakpoint(768px) {
+      display: flex;
+    }
+  }
+
+  @include breakpoint(768px) {
+    transform: translateX(20.73px);
+    transition: transform 0.3s ease-in;
+
+    &--transform {
+      transform: translateX(0);
+      transition: transform 0.3s ease-in;
+    }
+
+  }
 }

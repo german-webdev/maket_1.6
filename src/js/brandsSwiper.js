@@ -29,3 +29,6 @@ export default function brandsSwiper() {
 }
 
 brandsSwiper();
+
+window.addEventListener('resize', brandsSwiper());
+window.addEventListener('load', brandsSwiper());

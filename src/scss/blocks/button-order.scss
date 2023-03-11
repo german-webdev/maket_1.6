@@ -1,6 +1,7 @@
 .button-order {
   position: absolute;
-  right: 10px;
+  bottom: 45px;
+  right: 8px;
   display: flex;
   align-items: center;
   gap: 17px;
@@ -11,6 +12,11 @@
 
   background: #FF3E79;
   border-radius: 16px;
+
+  @include breakpoint(768px) {
+    position: unset;
+    top: 0;
+  }
 
   &__text {
     font-size: 12px;

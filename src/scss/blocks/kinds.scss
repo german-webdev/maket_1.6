@@ -2,12 +2,18 @@
 
   &__grid {
     height: 228px;
+    padding: 16px 0 0 0;
+
+    @include breakpoint(768px) {
+      height: auto;
+      padding: 24px 24px 24px 24px;
+    }
 
     .kinds__list {
       //************
 
       .kinds__item {
-        padding-top: 16px;
+        // padding-top: 16px;
 
         .kinds__link {
           display: flex;
@@ -24,8 +30,9 @@
           border: 1px solid #eaeaea;
           border-radius: 6px;
 
-          &:first-child(1) {
-            margin-left: 16px;
+          @include breakpoint(768px) {
+            max-width: 224px;
+            margin: 0;
           }
 
           .kinds__text {
@@ -44,8 +51,31 @@
 
       }
 
+      @include breakpoint(768px) {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(224px, 1fr));
+        grid-template-rows: auto;
+        column-gap: 24px;
+        row-gap: 24px;
 
+        max-height: 3000px;
+        overflow-x: hidden;
 
+        transition: max-height 0.3s cubic-bezier(1, 0, 1, 0);
+
+        &--hidden {
+          max-height: 160px;
+          overflow-x: hidden;
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+          transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+        }
+
+        &--hidden::-webkit-scrollbar,
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
     }
 
     &::after {

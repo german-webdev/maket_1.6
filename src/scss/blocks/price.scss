@@ -1,7 +1,22 @@
 .price {
+
   &__grid {
     height: 245px;
 
+    .price__item {
+
+      @include breakpoint(768px) {
+        &:not(:last-child)
+          > .order
+            > .order__table {
+              border-bottom: 1px solid #EAEAEA;
+            }
+      }
+    }
+
+    .price__pagination {
+      bottom: 0;
+    }
 
     &::after {
       content: "";
@@ -14,8 +29,20 @@
       background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
     }
 
-    .price__pagination {
-      bottom: 0;
+    @include breakpoint(768px) {
+      height: auto;
+      padding: 24px;
+
+      .price__list {
+
+        background: #FFFFFF;
+        border: 1px solid transparent;
+        border-radius: 6px;
+      }
+
+      &::after {
+        display: none;
+      }
     }
   }
 
@@ -53,7 +80,7 @@
           position: absolute;
           right: -15px;
           top: 1px;
-          
+
           content: url(../img/price/line.svg);
         }
       }

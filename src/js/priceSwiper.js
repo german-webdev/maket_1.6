@@ -29,3 +29,6 @@ export default function priceSwiper() {
 }
 
 priceSwiper();
+
+window.addEventListener('resize', priceSwiper());
+window.addEventListener('load', priceSwiper());

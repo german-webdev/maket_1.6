@@ -17,7 +17,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 16px;
 
     list-style: none;
     overflow-x: auto;
@@ -53,7 +52,7 @@
     height: 0;
   }
 
-  &--margin {
+  &--mb--xs {
     margin: 0 0 24px 0;
   }
 

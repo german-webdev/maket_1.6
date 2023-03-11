@@ -2,30 +2,67 @@
   display: flex;
   flex-wrap: wrap;
 
-  width: 100%;
-  height: auto;
+  @include breakpoint(596px) {
+    flex-wrap: nowrap;
+  }
 
-  &__text-box {
-    display: flex;
-    flex-direction: column;
-    row-gap: 15px;
-    max-height: 90px;
-    padding: 0 16px 0 16px;
-    overflow: hidden;
+  &__item {
+    margin-bottom: 16px;
 
-    .about__text {
-      font-size: 14px;
-      line-height: 18px;
-      letter-spacing: 0.2px;
-      color: #1B1C21;
+    .about__text-box {
+      display: flex;
+      flex-direction: column;
+      row-gap: 15px;
+      max-height: 3000px;
+      overflow-x: hidden;
+
+      transition: max-height 0.3s cubic-bezier(1, 0, 1, 0);
+
+      .about__text {
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.2px;
+        color: #1B1C21;
+      }
+
+
+      &--hidden {
+        max-height: 160px;
+        overflow-x: hidden;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+      }
+
+      &--hidden::-webkit-scrollbar,
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    .about__button {
+      padding-top: 10px;
     }
   }
 
-  &__image {
-    border-radius: 6px;
-    max-width: 100%;
-    max-height: 100%;
+  &__image-box {
+    padding: 0 24px;
+
+    .about__image {
+      max-width: 100%;
+      max-height: 100%;
+
+
+      @include breakpoint(586px) {
+        min-width: 320px;
+      }
+
+      @include breakpoint(768px) {
+        min-width: 360px;
+      }
+    }
   }
+
 
   &--margin {
     margin: 0 0 24px 0;
