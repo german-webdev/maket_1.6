@@ -4,7 +4,7 @@ export default function brandsSwiper() {
   let init = false;
 
   return () => {
-    if (window.innerWidth <= 767) {
+    if (window.innerWidth <= 768) {
       if (!init) {
         init = true;
         let swiper = new Swiper(".brands__grid", {
