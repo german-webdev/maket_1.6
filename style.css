@@ -419,12 +419,16 @@ body {
   background: #F8F8F8; }
   body.no-scroll {
     overflow: hidden; }
+  body::-webkit-scrollbar {
+    display: none; }
 
 /* Blocks */
 .page {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0; }
+  padding: 0;
+  position: relative;
+  overflow: hidden; }
 
 .page__mask {
   display: block;
@@ -551,7 +555,8 @@ body {
       min-width: 360px; } }
   @media (min-width: 768px) {
     .sidebar {
-      min-width: 320px; } }
+      min-width: 320px;
+      overflow-x: scroll; } }
 
 .sidebar__search-form {
   position: relative;
