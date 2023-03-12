@@ -45,12 +45,24 @@
         border: 2px solid #B8FFEC;
       }
     }
+
+    &--padding--xs {
+      padding: 0 16px;
+    }
+
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+
+    @include breakpoint(768px) {
+      &--padding--sm {
+        padding: 0 24px;
+      }
+    }
   }
 
-  &__list::-webkit-scrollbar {
-    width: 0;
-    height: 0;
-  }
+
 
   &--mb--xs {
     margin: 0 0 24px 0;

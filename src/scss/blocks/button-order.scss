@@ -1,14 +1,12 @@
 .button-order {
-  position: absolute;
-  bottom: 45px;
-  right: 8px;
+
   display: flex;
   align-items: center;
   gap: 17px;
   width: 119px;
   height: 32px;
 
-  padding: 0 12px;
+  padding: 0 16px;
 
   background: #FF3E79;
   border-radius: 16px;
@@ -28,5 +26,11 @@
     text-transform: uppercase;
 
     color: #FFFFFF;
+  }
+
+  &--position {
+    position: absolute;
+    bottom: 45px;
+    right: 8px;
   }
 }

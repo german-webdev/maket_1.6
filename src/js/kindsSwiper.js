@@ -4,7 +4,7 @@ export default function kindsSwiper() {
   let init = false;
 
   return () => {
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 767) {
       if (!init) {
         init = true;
         let swiper = new Swiper(".kinds__grid", {

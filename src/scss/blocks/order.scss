@@ -36,30 +36,20 @@
 
   @include breakpoint(768px) {
     border-radius: 0;
-    min-width: 100%;
+    width: unset;
     height: auto;
     margin: 0;
     padding: 0;
 
     .order__table {
       display: grid;
-      grid-template-columns: 370px 100px 100px 100px;
+      grid-template-columns: minmax(375px, 6fr) minmax(95px, 2fr) minmax(95px, 2fr) minmax(120px, 1fr);
       grid-template-rows: auto;
-      margin-left: 16px;
-      padding: 16px 16px 16px 0;
-
-
-
+      margin: 0 16px;
+      padding: 16px 0;
       align-items: center;
+
+
     }
-
-
-
-    // &.order__title {
-    //   display: flex;
-    //   position: absolute;
-    // }
   }
-
-
 }

@@ -8,7 +8,7 @@ import moreBrands from './moreBrands.js';
 import moreKinds from './moreKinds.js';
 import readMore from '../js/readMore.js';
 import sidebarToggle from '../js/sidebarToggle.js';
-import titleHidden from '../js/titleHidden.js';
+// import titleHidden from '../js/titleHidden.js';
 
 console.log('Works!')
 
