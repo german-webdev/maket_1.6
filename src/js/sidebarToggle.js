@@ -7,8 +7,24 @@ export default function sidebarToggle() {
   const body = document.body;
 
 
+  sidebar.addEventListener ('scroll', function() {
+    let scroll = sidebar.scrollTop;
+    console.log(scroll);
+
+    if ( scroll >= 50 ) {
+      logo.style.display = 'none';
+      burgerBtn.style.transform = 'translateX(620%)';
+      burgerBtn.style.transition = 'all 0.1s ease-in';
+    } else {
+      logo.style.display = 'flex';
+      burgerBtn.style.transform = 'translateX(0)';
+      burgerBtn.style.transition = 'all 0.1s ease-out';
+    }
+  });
+
   burgerBtn.addEventListener ('click', function() {
     let on = burgerBtn.classList.contains('burger__button--active');
+    scrollEditOff();
 
     if (!on) {
       showSidebar();
@@ -41,6 +57,17 @@ export default function sidebarToggle() {
     }, 20)
 
   }
+
+  function scrollEditOff() {
+    burgerBtn.style.transform = 'translateX(0)';
+    burgerBtn.style.transition = 'all 0.1s ease-out';
+    logo.style.display = 'flex';
+    setTimeout(() => {
+      sidebar.scrollTo(0, 0);
+    }, 500);
+
+  }
+
 };
 
 sidebarToggle();

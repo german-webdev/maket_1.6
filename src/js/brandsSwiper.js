@@ -1,13 +1,14 @@
 // модуль"brandsSwiper.js"
 
 export default function brandsSwiper() {
+  let brandsSwiper = document.querySelector('.brands__grid');
   let init = false;
 
   return () => {
     if (window.innerWidth <= 767) {
       if (!init) {
         init = true;
-        let swiper = new Swiper(".brands__grid", {
+        brandsSwiper = new Swiper('.brands__grid', {
           direction: 'horizontal',
           width: 320,
           // spaceBetween: 16,
@@ -22,7 +23,7 @@ export default function brandsSwiper() {
         });
       }
     } else if (init) {
-      swiper.destroy();
+      brandsSwiper.destroy();
       init = false;
     }
   }

@@ -1,13 +1,14 @@
 // модуль"kindsSwiper.js"
 
 export default function kindsSwiper() {
+  let kindsSwiper = document.querySelector('.kinds__grid');
   let init = false;
 
   return () => {
     if (window.innerWidth <= 767) {
       if (!init) {
         init = true;
-        let swiper = new Swiper(".kinds__grid", {
+        kindsSwiper = new Swiper('.kinds__grid', {
           direction: 'horizontal',
           width: 320,
           // spaceBetween: 16,
@@ -22,7 +23,7 @@ export default function kindsSwiper() {
         });
       }
     } else if (init) {
-      swiper.destroy();
+      kindsSwiper.destroy();
       init = false;
     }
   }

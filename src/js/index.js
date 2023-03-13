@@ -8,9 +8,13 @@ import moreBrands from './moreBrands.js';
 import moreKinds from './moreKinds.js';
 import readMore from '../js/readMore.js';
 import sidebarToggle from '../js/sidebarToggle.js';
-// import titleHidden from '../js/titleHidden.js';
+import callModalToggle from '../js/callModalToggle.js';
+import feedbackModalToggle from '../js/feedbackModalToggle.js';
+import phoneInput from '../js/phoneInput.js';
+
 
 console.log('Works!')
+
 
 
 

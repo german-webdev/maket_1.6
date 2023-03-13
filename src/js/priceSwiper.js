@@ -1,13 +1,16 @@
 // модуль"priceSwiper.js"
 
+
 export default function priceSwiper() {
+  let priceSwiper = document.querySelector('.price__grid');
+
   let init = false;
 
   return () => {
     if (window.innerWidth <= 767) {
       if (!init) {
         init = true;
-        let swiper = new Swiper(".price__grid", {
+        priceSwiper = new Swiper('.price__grid', {
           direction: 'horizontal',
           width: 320,
           spaceBetween: 16,
@@ -22,7 +25,7 @@ export default function priceSwiper() {
         });
       }
     } else if (init) {
-      swiper.destroy();
+      priceSwiper.destroy();
       init = false;
     }
   }

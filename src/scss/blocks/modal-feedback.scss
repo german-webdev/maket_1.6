@@ -1,4 +1,4 @@
-.modal-call {
+.modal-feedback {
   display: flex;
   flex-direction: column;
 
@@ -23,7 +23,7 @@
     position: relative;
     top: 104px;
 
-    .modal-call__title {
+    .modal-feedback__title {
       @extend %typeset-bold;
 
       align-items: flex-end;
