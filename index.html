@@ -52,9 +52,9 @@
       <aside class="sidebar">
         <ul class="sidebar__header">
           <li>
-              <button class="button sidebar__search-form">
-                <img src="./img/sidebar/search.svg" class="search-form__icon">
-              </button>
+            <button class="button sidebar__search-form">
+              <img src="./img/sidebar/search.svg">
+            </button>
           </li>
         </ul>
         <nav class="nav-sidebar">
@@ -106,12 +106,12 @@
           <div class="feedback feedback--margin--xs feedback--padding--xs">
             <ul class="feedback__list">
               <li class="feedback__item">
-                <button class="button">
+                <button class="button" id="callModalBtn">
                   <img src="./img/feedback/call.svg" class="search-form__icon">
                 </button>
               </li>
               <li class="feedback__item">
-                <button class="button">
+                <button class="button" id="feedbackModalBtn">
                   <img src="./img/feedback/chat.svg" class="search-form__icon">
                 </button>
               </li>
@@ -137,32 +137,86 @@
         </div>
       </aside> 
 
+      <aside class="modal-call">
+        <button class="button modal-call__btn-closed">
+          <img src="./img/burger/burger-close.svg">
+        </button>
+
+        <div class="modal-call__form-box">
+          <h2 class="title modal-call__title main__title main__title--padding--xs main__title--padding--sm">Заказать звонок</h2>
+          <div class="container">
+            <form class="form modal-call__form" action="#" method="post">
+
+              <input type="text" name="telephone" class="form__field" id="phone-mask" placeholder="Телефон">
+
+              <strong class="form__text">
+                Нажимая “отправить”, вы даете согласие на <a href="#">обработку персональных данных</a> и соглашаетесь с нашей <a href="#">политикой конфиденциальности</a>
+              </strong>
+              <label class="form__input-box">
+                <input type="submit" class="form__input" name="submit" value="Отправить">
+                <img class="form__input-image" src="./img/button-order/dropdown.svg" alt="">
+              </label>
+
+            </form>
+          </div>
+        </div>
+      </aside> 
+
+      <aside class="modal-feedback">
+        <button class="button modal-feedback__btn-closed">
+          <img src="./img/burger/burger-close.svg">
+        </button>
+
+        <div class="modal-feedback__form-box">
+          <h2 class="title modal-call__title main__title main__title--padding--xs main__title--padding--sm">Обратная связь</h2>
+          <div class="container">
+            <form class="form modal-feedback__form" action="#" method="post">
+
+              <input type="text" name="name" class="form__field" placeholder="Имя">
+
+              <input type="tel" name="telephone" class="form__field" id="phone-mask" placeholder="Телефон">
+
+              <input type="email" name="email" class="form__field" placeholder="Электронная почта" required>
+
+              <textarea type="text" name="text" class="form__field form__field--textarea" placeholder="Сообщение"></textarea>
+
+              <strong class="form__text">
+                Нажимая “отправить”, вы даете согласие на <a href="#">обработку персональных данных</a> и соглашаетесь с нашей <a href="#">политикой конфиденциальности</a>
+              </strong>
+              <label class="form__input-box">
+                <input type="submit" class="form__input" name="submit" value="Отправить">
+                <img class="form__input-image" src="./img/button-order/dropdown.svg" alt="">
+              </label>
+
+            </form>
+          </div>
+        </div>
+      </aside> 
+
       <main class="main">
         <h1 class="title main__title main__title--padding--xs main__title--padding--sm">Услуги и сервисы</h1>
 
         <nav class="nav nav--mb--xs">
-          <div class="container">
-            <ul class="nav__list">
-              <li class="nav__item">
-                <a href="#" class="nav__link nav__link--active">Ремонтируемые устройства</a>
-              </li>
-              <li class="nav__item">
-                <a href="#" class="nav__link">Дополнительные услуги</a>
-              </li>
-              <li class="nav__item">
-                <a href="#" class="nav__link">Цены на услуги</a>
-              </li>
-              <li class="nav__item">
-                <a href="#" class="nav__link">Адреса сервисных центров</a>
-              </li>
-              <li class="nav__item">
-                <a href="#" class="nav__link">Специальные цены</a>
-              </li>
-              <li class="nav__item">
-                <a href="#" class="nav__link">Отзывы</a>
-              </li>
-            </ul>
-          </div>
+          <ul class="nav__list nav__list--padding--xs nav__list--padding--sm">
+            <li class="nav__item">
+              <a href="#" class="nav__link nav__link--active">Ремонтируемые устройства</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Дополнительные услуги</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Цены на услуги</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Адреса сервисных центров</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Специальные цены</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Отзывы</a>
+            </li>
+          </ul>
         </nav> 
 
         <section class="about about--margin">
@@ -365,26 +419,26 @@
         <section class="price">
           <h2 class="title title--h2 title--padding--xs">Цены на услуги</h2>
 
-          <div class="price__grid swiper">
+          <div class="price__grid swiper price__grid--padding-sm price__grid--margin--sm">
             <ul class="price__list swiper-wrapper">
 
               <li class="price__item swiper-slide">
                 <div class="order">
                   <dl class="order__table">
-                    <span class="cell">
+                    <span class="order__cell">
                       <dt class="order__title">Ремонтные услуги</dt>
                         <dd class="order__text">Диагностика</dd>
                     </span>
-                    <span class="cell">
+                    <span class="order__cell">
                     <dt class="order__title">Цена</dt>
                       <dd class="">Бесплатно</dd>
                     </span>
-                    <span class="cell">
+                    <span class="order__cell">
                     <dt class="order__title">Срок</dt>
                       <dd class="order__text">30 мин</dd>
                     </span>
 
-                    <button class="button-order" type="button" id="priceButton">
+                    <button class="button-order button-order--position" type="button" id="priceButton">
                       <span class="button-order__text">Заказать</span>
                       <img src="./img/button-order/dropdown.svg" alt="">
                     </button>
@@ -409,7 +463,7 @@
                       <dd class="order__text">30-120 мин</dd>
                     </span>
 
-                    <button class="button-order" type="button" id="priceButton">
+                    <button class="button-order button-order--position" type="button" id="priceButton">
                       <span class="button-order__text">Заказать</span>
                       <img src="./img/button-order/dropdown.svg" alt="">
                     </button>
@@ -433,7 +487,7 @@
                       <dd class="order__text">30-120 мин</dd>
                     </span>
 
-                    <button class="button-order" type="button" id="priceButton">
+                    <button class="button-order button-order--position" type="button" id="priceButton">
                       <span class="button-order__text">Заказать</span>
                       <img src="./img/button-order/dropdown.svg" alt="">
                     </button>
@@ -457,7 +511,7 @@
                       <dd class="order__text">30-120 мин</dd>
                     </span>
 
-                    <button class="button-order" type="button" id="priceButton">
+                    <button class="button-order button-order--position" type="button" id="priceButton">
                       <span class="button-order__text">Заказать</span>
                       <img src="./img/button-order/dropdown.svg" alt="">
                     </button>
@@ -481,7 +535,7 @@
                       <dd class="order__text">30-120 мин</dd>
                     </span>
 
-                    <button class="button-order" type="button" id="priceButton">
+                    <button class="button-order button-order--position" type="button" id="priceButton">
                       <span class="button-order__text">Заказать</span>
                       <img src="./img/button-order/dropdown.svg" alt="">
                     </button>
@@ -494,18 +548,25 @@
 
           </div>
 
-          <div class="price__info-box price__info-box--padding--xs">
-            <p class="price__info-text">Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.</p>
-            <a class="price__offer price__offer--padding--xs" href="#">Получить коммерческое <span class="price__offer-arrow">предложение</span></a>
+          <div class="container">
+            <div class="price__info-box">
+              <p class="price__info-text price__info-text--mb">Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.</p>
+              <a class="price__offer" href="#">Получить коммерческое<span class="price__offer-arrow">предложение</span></a>
+            </div>
           </div>
         </section> 
       </main>
 
-      <footer class="footer footer--margin--xs footer--padding--xs">
-        <div class="footer__copyright"><span>&copy; 2019 CPS</span><span></span>Разработано командой Apesong</div>
-        <a class="footer__policy" href="#">Политика конфиденциальности</a>
-        <strong class="footer__info" href="#">Информация, размещенная на данной странице, не является публичной офертой</strong>
-      </footer>
+      <div class="container">
+        <footer class="footer footer--margin--xs footer--margin--sm footer--padding--xs footer--padding--sm">
+            <div class="footer__copyright">
+              <span>&copy; 2019 CPS</span>
+              <span>Разработано командой Apesong</span>
+            </div>
+            <a class="footer__policy" href="#">Политика конфиденциальности</a>
+            <strong class="footer__info" href="#">Информация, размещенная на данной странице, не является публичной офертой</strong>
+        </footer>
+      </div>
     </div> 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
