@@ -1,16 +1,15 @@
 .logo {
   display: flex;
-  position: sticky;
-  top: 16px;
-  left: 0;
-  bottom: 1000px;
+  position: absolute;
+  top: 18.59px;
+  left: 75.76px;
   z-index: 3000;
 
   transform: translateX(-5px);
   transition: transform 0.2s linear;
 
   &--transform {
-    transform: translateX(-5px);
+    transform: translateX(-10.24px);
     transition: transform 0.2s linear;
   }
 
@@ -42,9 +41,12 @@
     transition: transform 0.3s ease-in;
 
     &--transform {
-      transform: translateX(-5px);
+      transform: translateX(-10.24px);
       transition: transform 0.3s ease-in;
     }
+  }
 
+  @include breakpoint(1120px) {
+    transform: translateY(0);
   }
 }

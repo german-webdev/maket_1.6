@@ -4,23 +4,17 @@
     height: 228px;
     padding: 16px 0 0 0;
 
-    @include breakpoint(768px) {
-      height: auto;
-      padding: 24px 24px 24px 24px;
-    }
-
     .kinds__list {
       //************
 
       .kinds__item {
-        // padding-top: 16px;
+        margin: 0;
 
         .kinds__link {
           display: flex;
           justify-content: space-between;
           align-items: flex-end;
 
-          max-width: 240px;
           height: 160px;
 
           padding: 16px;
@@ -31,17 +25,19 @@
           border-radius: 6px;
 
           @include breakpoint(768px) {
-            max-width: 224px;
+            min-width: 224px;
+            margin: 0;
+          }
+
+          @include breakpoint(1120px) {
+            min-width: 240px;
             margin: 0;
           }
 
           .kinds__text {
+            @extend %typeset-medium;
+
             align-self: flex-start;
-            font-size: 16px;
-            line-height: 24px;
-            font-weight: 500;
-            letter-spacing: -0.2px;
-            color: #1B1C21;
           }
 
           .kinds__image {
@@ -76,6 +72,16 @@
           display: none;
         }
       }
+
+      @include breakpoint(1120px) {
+        grid-template-columns: repeat(auto-fit, minmax(224px, 1fr));
+        column-gap: 24px;
+      }
+
+      @include breakpoint(1440px) {
+        grid-template-columns: repeat(auto-fit, 240px);
+        column-gap: 32px;
+      }
     }
 
     &::after {
@@ -90,15 +96,13 @@
     }
 
 
+    @include breakpoint(768px) {
+      height: auto;
+      padding: 24px 24px 24px 24px;
+    }
 
-
-
-
-
-
-
-
-
-
+    @include breakpoint(1120px) {
+      padding: 24px 24px 32px 32px;
+    }
   }
 }

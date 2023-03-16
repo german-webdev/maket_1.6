@@ -3,13 +3,24 @@
   left: 0;
   top: 0;
 
-  .swiper-slide:last-child {
-    margin-right: 16px;
+  .swiper-slide {
 
-    @include breakpoint(768px) {
-      margin: 0;
+    &:last-child {
+      margin-right: 16px;
+
+      @include breakpoint(768px) {
+        margin: 0;
+      }
+
     }
+
+    @include breakpoint(1120px) {
+      margin-right: 0;
+    }
+
   }
+
+
 
 
   .swiper-pagination {

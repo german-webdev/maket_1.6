@@ -1,68 +1,84 @@
 .footer {
-  display: flex;
-  flex-direction: column;
-  font-family: inherit;
-  font-size: 14px;
-  line-height: 16px;
-
-  text-align: center;
-
-  color: #7E7E82;
-  border-top: 1px solid #D9FFF5;
-
-  mix-blend-mode: normal;
-  opacity: 0.72;
 
 
-
-  &__copyright {
+  &__container {
     display: flex;
     flex-direction: column;
-    margin: 0 0 16px 0;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 16px;
+
+    text-align: center;
+
+    color: #7E7E82;
+    border-top: 1px solid #D9FFF5;
+
+    mix-blend-mode: normal;
+    opacity: 0.72;
+
+    .footer__copyright {
+      display: flex;
+      flex-direction: column;
+      margin: 0 0 16px 0;
+
+
+      @include breakpoint(768px) {
+        text-align: start;
+        margin: 0;
+      }
+    }
+
+    .footer__policy {
+      margin: 0 0 16px 0;
+
+      @include breakpoint(768px) {
+        text-align: center;
+        margin: 0;
+      }
+
+      @include breakpoint(768px) {
+        text-align: start;
+        margin: 0;
+      }
+    }
+
+    .footer__info {
+
+      @include breakpoint(768px) {
+        text-align: end;
+        margin: 0;
+      }
+    }
+
+    &--padding--xs {
+      padding: 16px 16px 19px 16px;
+    }
+
+    &--margin--xs {
+      margin: 45px 0 0 0;
+    }
 
     @include breakpoint(768px) {
-      text-align: start;
-      margin: 0;
-    }
-  }
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
 
-  &__policy {
-    margin: 0 0 16px 0;
+      &--margin--sm {
+        margin: 47px 0 0 0;
+      }
 
-    @include breakpoint(768px) {
-      text-align: center;
-      margin: 0;
-    }
-  }
-
-  &__info {
-
-    @include breakpoint(768px) {
-      text-align: end;
-      margin: 0;
-    }
-  }
-
-  &--padding--xs {
-    padding: 16px 0 19px 0;
-  }
-
-  &--margin--xs {
-    margin: 45px 0 0 0;
-  }
-
-  @include breakpoint(768px) {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1, auto;
-
-    &--margin--sm {
-      margin: 47px 0 0 0;
+      &--padding--sm {
+        padding: 32px 24px 25px 24px;
+      }
     }
 
-    &--padding--sm {
-      padding: 32px 0 25px 0;
+    @include breakpoint(1120px) {
+      grid-template-columns: 1.5fr 1.5fr 1.4fr;
     }
+
   }
+
+
+
+
 
 }

@@ -1,11 +1,33 @@
 .page {
   max-width: 1440px;
+  height: 100%;
   margin: 0 auto;
   padding: 0;
   position: relative;
+  background: $mainBgColor;
+
   overflow: hidden;
 
+  @include breakpoint(768px) {
+    min-width: 768px;
+  }
 }
+
+.page__flex {
+
+  @include breakpoint(1120px) {
+    display: flex;
+  }
+
+  .page__col {
+    display: flex;
+    flex-direction: column;
+    @include breakpoint(1120px) {
+      min-width: 768px;
+    }
+  }
+}
+
 
 .page__mask {
   display: block;
@@ -21,7 +43,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 0;
 
   &--active {
     opacity: 0.96;

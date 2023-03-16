@@ -16,7 +16,7 @@
   box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2);
 
   transform: translateX(-1000px);
-  transition: transform 0.5s ease-in;
+  // transition: transform 0.5s ease-in;
 
   &__search-form {
     position: relative;
@@ -26,9 +26,12 @@
   }
 
   &__footer {
-    display: block;
-    position: relative;
+
     margin-top: 43px;
+
+    @include breakpoint(1120px) {
+      flex-grow: 1;
+    }
   }
 
   &--active {
@@ -48,6 +51,22 @@
     min-width: 320px;
   }
 
+  @include breakpoint(1120px) {
+
+    justify-content: space-evenly;
+    position: relative;
+    transform: translateX(0px) translateY(-100px);
+    transition: unset;
+    height: auto;
+    box-shadow: unset;
+
+    &__footer-after {
+      width: 1px;
+      height: 1px;
+
+      flex-grow: 2;
+    }
+  }
 }
 
 

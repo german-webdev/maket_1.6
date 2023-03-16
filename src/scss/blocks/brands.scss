@@ -4,12 +4,6 @@
     height: 140px;
     padding: 16px 0 0 0;
 
-    @include breakpoint(768px) {
-      height: auto;
-
-      padding: 24px 24px 32px 24px;
-    }
-
     .brands__list {
 
       .brands__item {
@@ -82,5 +76,16 @@
         display: flex;
       }
     }
+
+    @include breakpoint(768px) {
+      height: auto;
+
+      padding: 24px 24px 32px 24px;
+    }
+
+    @include breakpoint(1440px) {
+      padding: 24px 32px 32px 32px;
+    }
+
   }
 }

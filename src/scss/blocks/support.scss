@@ -1,17 +1,46 @@
 .support {
   display: flex;
-  position: absolute;
   right: 0;
-  transform: translateX(-16px);
+  transform: translate3d(0, 0, 0);
 
-  &__list {
+  margin-left: auto;
 
+  .support__list {
     display: flex;
+    align-items: center;
     gap: 16px;
 
-    .support__text {
-      display: none;
+    .support__item {
+      display: flex;
+      align-items: center;
+
+      .support__text {
+        font-family: inherit;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+
+        color: #1B1C21;
+
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        transform: translateX(-1000px);
+
+        @include breakpoint(1120px) {
+          padding: 0 8px 0 0;
+
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          transform: translateX(0);
+        }
+      }
     }
+
+
+
+
 
   }
 
@@ -23,7 +52,12 @@
     top: 5px;
   }
 
+  @include breakpoint(1120px) {
 
+    transform: translate3d(-14px, 106px, 0);
 
-
+    &::before {
+      display: none;
+    }
+  }
 }

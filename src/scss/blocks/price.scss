@@ -43,8 +43,6 @@
     @include breakpoint(768px) {
       height: auto;
 
-
-
       .price__list {
 
         background: #FFFFFF;
@@ -64,10 +62,17 @@
         display: none;
       }
     }
+
+    @include breakpoint(1440px) {
+
+      &--padding-md {
+        padding: 24px 32px;
+      }
+
+    }
   }
 
   .price__info-box {
-
     max-width: 420px;
 
     .price__info-text {
