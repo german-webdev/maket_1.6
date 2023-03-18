@@ -2,9 +2,9 @@
 function sidebarToggle() {
   const pageMask = document.querySelector('.page__mask');
   const sidebar = document.querySelector('.sidebar');
+  const burgerContainer = document.querySelector('.burger-container');
   const burgerBtn = document.querySelector('#sidebarToggle');
   const feedback = document.querySelector('.feedback');
-  const feedbackList = document.querySelector('.feedback__list');
   const logo = document.getElementById('logo');
   const body = document.body;
 
@@ -42,9 +42,9 @@ function sidebarToggle() {
     body.classList.add('no-scroll');
     pageMask.addEventListener('click', closeSidebar);
     feedback.style.transform = 'translateX(0)';
+    burgerContainer.style.zIndex = '5000';
 
     burgerMove();
-
   }
 
   function closeSidebar() {
@@ -55,6 +55,10 @@ function sidebarToggle() {
     logo.classList.remove('logo--opacity');
     body.classList.remove('no-scroll');
 
+
+    setTimeout(() => {
+      burgerContainer.style.zIndex = '2000';
+    }, 500)
     setTimeout(() => {
       pageMask.classList.remove('page__mask--active');
     }, 20)
