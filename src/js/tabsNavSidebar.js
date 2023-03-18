@@ -11,6 +11,8 @@ export default function tabsNavSidebar() {
 
   const checkoutTabs = (item, index) => {
     item.addEventListener('click', (event) => {
+      if (item.classList.contains('nav-sidebar__item--active')) return;
+
       clearActiveClass(tabItems);
       setActiveClass(tabItems, index);
     });
