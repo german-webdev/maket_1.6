@@ -651,7 +651,7 @@ body {
   top: 0;
   left: 0;
   z-index: 3000;
-  overflow-x: scroll;
+  overflow: auto;
   background: #FFFFFF;
   box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2);
   transform: translateX(-1000px);
@@ -728,8 +728,8 @@ body {
     .burger {
       transform: translateY(0);
       display: none; } }
-  .burger:hover {
-    transform: scale(1.03);
+  .burger:active {
+    transform: scale(0.95);
     box-shadow: 3px 0 5px -3px #333333, -3px 0 5px -3px #333333, 0 3px 5px -3px #333333; }
 
 .main {
