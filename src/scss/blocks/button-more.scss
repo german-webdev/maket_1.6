@@ -27,12 +27,25 @@
     letter-spacing: -0.2px;
 
     color: $textPrimary;
+
+    transition: all 0.1s ease-in-out;
+
+    @include breakpoint(1120px) {
+
+      &:hover {
+        color: #ff0077;
+        text-shadow:
+          1px 1px 1px #00000086,
+          10px 1px 20px #00f7ffb2,
+          -30px 1px 20px #00f7ff86;
+      }
+    }
+
   }
 
   &--padding--xs {
     padding: 16px 16px 0 0;
   }
-
 }
 
 

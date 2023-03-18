@@ -10,7 +10,7 @@
     align-items: center;
     gap: 16px;
 
-    .support__item {
+    .support__item  {
       display: flex;
       align-items: center;
 
@@ -38,10 +38,9 @@
       }
     }
 
-
-
-
-
+    @include breakpoint(1120px) {
+      gap: 32px;
+    }
   }
 
   &::before {
@@ -52,9 +51,12 @@
     top: 5px;
   }
 
-  @include breakpoint(1120px) {
+  @include breakpoint(768px) {
+    margin: unset;
+  }
 
-    transform: translate3d(-14px, 106px, 0);
+  @include breakpoint(1120px) {
+    transform: translate3d(-5px, 118px, 0);
 
     &::before {
       display: none;

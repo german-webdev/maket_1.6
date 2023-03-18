@@ -2,17 +2,19 @@
   display: flex;
   flex-wrap: wrap;
 
-  @include breakpoint(596px) {
-    flex-wrap: nowrap;
+  &--margin {
+    margin-bottom: 16px;
   }
 
-  &__item {
+  &__inner {
     margin-bottom: 16px;
+    padding: 16px;
 
     .about__text-box {
       display: flex;
       flex-direction: column;
       row-gap: 15px;
+
       max-height: 3000px;
       overflow-x: hidden;
 
@@ -27,7 +29,7 @@
 
 
       &--hidden {
-        max-height: 160px;
+        max-height: 155px;
         overflow-x: hidden;
         -ms-overflow-style: none;
         scrollbar-width: none;
@@ -38,34 +40,56 @@
       &::-webkit-scrollbar {
         display: none;
       }
+
+      @include breakpoint(596px) {
+        max-width: 490px;
+      }
     }
 
     .about__button {
       padding-top: 10px;
     }
-  }
 
-  &__image-box {
-    padding: 0 24px;
+    @include breakpoint(768px) {
+      padding: 0 24px;
+    }
 
-    .about__image {
-      max-width: 100%;
-      max-height: 100%;
-
-
-      @include breakpoint(586px) {
-        min-width: 320px;
-      }
-
-      @include breakpoint(768px) {
-        min-width: 360px;
-      }
+    @include breakpoint(1440px) {
+      padding: 0 32px;
     }
   }
 
+  &__image-box {
 
-  &--margin {
-    margin: 0 0 24px 0;
+    width: 531.35px;
+    height: auto;
+
+
+    .about__image {
+
+      max-width: 100%;
+      object-fit: contain;
+
+      @include breakpoint(768px) {
+        padding: 0 24px;
+      }
+
+      @include breakpoint(1440px) {
+        padding: 0 28.65px 0 0;
+      }
+    }
+
+
+  }
+
+  @include breakpoint(596px) {
+    flex-wrap: nowrap;
+    margin-bottom: 24px;
+  }
+
+  @include breakpoint(1120px) {
+    justify-content: space-between;
+    margin-bottom: 56px;
   }
 }
 

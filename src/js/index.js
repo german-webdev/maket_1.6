@@ -11,13 +11,22 @@ import sidebarToggle from '../js/sidebarToggle.js';
 import callModalToggle from '../js/callModalToggle.js';
 import feedbackModalToggle from '../js/feedbackModalToggle.js';
 import phoneInput from '../js/phoneInput.js';
+import tabsNavSidebar from '../js/tabsNavSidebar.js';
+import tabsNav from '../js/tabsNav.js';
 
 
 console.log('Works!')
+// let media = window.matchMedia('(min-width: 1px)');
+// let preload = document.querySelector('.preload');
+// const logo = document.getElementById('logo');
+// function nonTrans() {
+//   if (media.matches) {
+//     logo.classList.add('preload');
+//   }
+// }
 
 
-
-
+// window.addEventListener('resize', nonTrans);
 
 
 

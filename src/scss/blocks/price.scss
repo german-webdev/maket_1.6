@@ -8,7 +8,12 @@
       @include breakpoint(768px) {
         &:not(:last-child)
           .order__table {
-              border-bottom: 1px solid #EAEAEA;
+            border-bottom: 1px solid #EAEAEA;
+
+            &:hover {
+              border-bottom: 1px solid #63fad2;
+            }
+
         }
 
         &:not(:first-child)

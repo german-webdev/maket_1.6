@@ -9,6 +9,10 @@
 
   transform: translateX(0px);
 
+  transition:
+    box-shadow 0.1s ease-in-out,
+    transform 0.1s ease-in-out;
+
   .burger__button {
     position: inherit;
 
@@ -42,17 +46,29 @@
         transition: all 0.5s ease-in;
       }
     }
+
   }
 
   @media (max-width: 767px) {
     transform: translateX(0);
+  }
 
+
+  @include breakpoint(768px) {
+    left: 24px;
   }
 
   @include breakpoint(1120px) {
     transform: translateY(0);
+    display: none;
   }
 
-
+  &:hover {
+    transform: scale(1.03);
+    box-shadow:
+      3px 0 5px -3px #333333,
+      -3px 0 5px -3px #333333,
+      0 3px 5px -3px #333333;
+  }
 
 }

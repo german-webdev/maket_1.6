@@ -2,21 +2,16 @@
   display: flex;
   position: absolute;
   top: 18.59px;
-  left: 75.76px;
-  z-index: 3000;
+  left: 70.76px;
+  z-index: 4000;
 
-  transform: translateX(-5px);
-  transition: transform 0.2s linear;
 
-  &--transform {
-    transform: translateX(-10.24px);
-    transition: transform 0.2s linear;
-  }
+  transition: all 0.2s ease-in-out;
 
   &.logo--opacity::before {
     opacity: 0;
     transform: scale(0);
-    transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in-out;
   }
 
   &::before {
@@ -28,25 +23,36 @@
 
     opacity: 1;
     transform: scale(1);
-    transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in-out;
     display: none;
 
     @include breakpoint(768px) {
       display: flex;
     }
+
+    @include breakpoint(1120px) {
+      display: none;
+    }
   }
 
   @include breakpoint(768px) {
+    left: 83.76px;
     transform: translateX(20.73px);
-    transition: transform 0.3s ease-in;
+    transition: transform 0.3s ease-in-out;
 
     &--transform {
       transform: translateX(-10.24px);
-      transition: transform 0.3s ease-in;
+      transition: transform 0.3s ease-in-out;
     }
   }
 
   @include breakpoint(1120px) {
-    transform: translateY(0);
+    position: fixed;
+    top: 30px;
+    left: auto;
   }
+
+  // &.preload {
+  //   transition: all 0s linear;
+  // }
 }

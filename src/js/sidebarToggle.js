@@ -1,27 +1,15 @@
 
-export default function sidebarToggle() {
+function sidebarToggle() {
   const pageMask = document.querySelector('.page__mask');
   const sidebar = document.querySelector('.sidebar');
   const burgerBtn = document.querySelector('#sidebarToggle');
   const feedback = document.querySelector('.feedback');
   const feedbackList = document.querySelector('.feedback__list');
   const logo = document.getElementById('logo');
-  // const profile = document.getElementById('profile');
   const body = document.body;
 
-  // let mql = window.matchMedia('(min-width: 768px)');
+  let mql = window.matchMedia('(min-width: 768px)');
   // let cloneFeedback = feedbackList.cloneNode(true);
-
-  // function showFeedback() {
-  //   if (mql.matches) {
-  //     feedback.appendChild(cloneFeedback);
-  //   } else {
-  //     feedback.removeChild(cloneFeedback);
-  //   }
-  // }
-
-  // window.addEventListener('load', showFeedback);
-  // window.addEventListener('resize', showFeedback);
 
   sidebar.addEventListener ('scroll', function() {
     let scroll = sidebar.scrollTop;
@@ -47,22 +35,21 @@ export default function sidebarToggle() {
 
   function showSidebar() {
     pageMask.classList.add('page__mask--active');
-
     sidebar.classList.add('sidebar--active');
     burgerBtn.classList.add('burger__button--active');
-    burgerBtn.style.transform = 'translateX(-8px)';
-    burgerBtn.style.transition = 'transform 0.3s ease-in';
     logo.classList.add('logo--transform');
     logo.classList.add('logo--opacity');
     body.classList.add('no-scroll');
-
     pageMask.addEventListener('click', closeSidebar);
+    feedback.style.transform = 'translateX(0)';
+
+    burgerMove();
+
   }
 
   function closeSidebar() {
     burgerBtn.classList.remove('burger__button--active');
     burgerBtn.style.transform = 'translateX(0)';
-    burgerBtn.style.transition = 'transform 0.3s ease-in';
     sidebar.classList.remove('sidebar--active');
     logo.classList.remove('logo--transform');
     logo.classList.remove('logo--opacity');
@@ -71,12 +58,9 @@ export default function sidebarToggle() {
     setTimeout(() => {
       pageMask.classList.remove('page__mask--active');
     }, 20)
-
   }
 
   function scrollEditOff() {
-    burgerBtn.style.transform = 'translateX(0)';
-    burgerBtn.style.transition = 'all 0.1s ease-out';
     logo.style.display = 'flex';
     setTimeout(() => {
       sidebar.scrollTo(0, 0);
@@ -84,6 +68,25 @@ export default function sidebarToggle() {
 
   }
 
+  function burgerMove() {
+    if (mql.matches) {
+      burgerBtn.style.transform = 'translateX(-8px)';
+      burgerBtn.style.transition = 'transform 0.3s ease-in-out';
+    }
+  }
+
+  // function showFeedback() {
+  //   if (mql.matches) {
+  //     feedback.appendChild(cloneFeedback);
+  //   } else {
+  //     return;
+  //   }
+  // }
+
+
+
+  // window.addEventListener('load', showFeedback);
+  // window.addEventListener('resize', showFeedback);
 };
 
-sidebarToggle();
+export default sidebarToggle();

@@ -5,6 +5,7 @@
 @import 'extend';
 @import 'vendor/reset';
 
+
 body {
   font-family: 'TT Lakes', sans-serif;
   background: #F2F2F2;
@@ -18,10 +19,12 @@ body {
   }
 }
 
+
+
+
 /* Blocks */
 
 @import 'blocks/page';
-@import 'blocks/page-flex';
 @import 'blocks/container';
 @import 'blocks/header';
 @import 'blocks/button';

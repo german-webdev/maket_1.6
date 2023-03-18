@@ -22,6 +22,10 @@
         display: block;
 
         padding: 0 0 0 16px;
+
+        @include breakpoint(1120px) {
+          padding: 0 0 0 20px;
+        }
       }
 
       &::before {
@@ -33,14 +37,13 @@
         top: 0;
 
         border-radius:  0 5px 5px 0;
-
         background: $highLightColor;
         opacity: 0;
 
         content: "";
       }
 
-      &:hover::before,
+      &:hover,
       &--active::before {
         opacity: 1;
       }
@@ -54,5 +57,9 @@
     }
   }
 
-  
+  @include breakpoint(1120px) {
+    top: 90px;
+  }
+
+
 }

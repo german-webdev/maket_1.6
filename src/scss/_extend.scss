@@ -6,6 +6,21 @@
   border-radius: 50%;
 }
 
+%hover-card {
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow:
+      0 3px 4px -3px #63fad2;
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: none;
+
+  }
+}
+
+
 %divider {
   width: 2px;
   height: 32px;

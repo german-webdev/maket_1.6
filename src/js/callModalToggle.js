@@ -3,27 +3,23 @@ export default function callModalToggle() {
   const modalCall = document.querySelector('.modal-call');
   const modalFeedback = document.querySelector('.modal-feedback');
   const closedBtn = document.querySelector('.modal-call__btn-closed');
-  const callModalBtn = document.querySelector('#callModalBtn');
+  const callModalBtn = document.querySelectorAll('#callModalBtn');
   const body = document.body;
 
-
-  callModalBtn.addEventListener ('click', function() {
+  callModalBtn.forEach(e => e.addEventListener ('click', function() {
     let on = body.classList.contains('modal-call--active');
+    modalCall.classList.toggle('modal-call--active');
 
     if (!on) {
       showCallModal();
     } else {
       closeCallModal();
     }
-
-
-
-  });
+  }));
 
   function showCallModal() {
     pageMask.classList.add('page__mask--active');
 
-    modalCall.classList.add('modal-call--active');
     modalFeedback.classList.remove('modal-feedback--active');
     body.classList.add('no-scroll');
 
@@ -32,8 +28,8 @@ export default function callModalToggle() {
   }
 
   function closeCallModal() {
-    modalCall.classList.remove('modal-call--active');
     body.classList.remove('no-scroll');
+    modalCall.classList.remove('modal-call--active');
 
     setTimeout(() => {
       pageMask.classList.remove('page__mask--active');
@@ -42,9 +38,5 @@ export default function callModalToggle() {
 
   }
 };
-
-
-
-
 
 callModalToggle();

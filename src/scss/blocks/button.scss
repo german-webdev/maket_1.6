@@ -4,4 +4,38 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  transition: all 0.1s ease-in-out;
+
+  &:active {
+    transform: translateY(-1px) scale(0.95);
+
+    box-shadow:
+      0 -8px 10px -6px #FF3E79,
+      8px 0 10px -6px #FF3E79,
+      -8px 0 10px -6px #FF3E79,
+      0 8px 10px -6px #FF3E79;
+  }
+
+  @include breakpoint(1120px) {
+
+    &:hover {
+      transform: translate3d(-1px, -2px, 1px) scale(1.03);
+
+      box-shadow:
+        3px 0 5px -3px #333333,
+        -3px 0 5px -3px #333333,
+        0 3px 5px -3px #333333;
+    }
+
+    &:active {
+      transform: translateY(-1px);
+
+      box-shadow:
+        0 -8px 10px -6px #FF3E79,
+        8px 0 10px -6px #FF3E79,
+        -8px 0 10px -6px #FF3E79,
+        0 8px 10px -6px #FF3E79;
+    }
+  }
 }

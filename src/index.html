@@ -16,43 +16,60 @@
   <body>
     <div class="page" id="page">
       <div class="page__mask"></div>
+        <div class="burger-container">
+          <div class="burger">
+            <button class="button burger__button" type="button" id="sidebarToggle">
+                <img class="burger__opener" src="./img/burger/burger-opener.svg" />
+                <img class="burger__close" src="./img/burger/burger-close.svg" />
+            </button>
+          </div>
 
-      <li class="burger">
-        <button class="button burger__button" type="button" id="sidebarToggle">
-            <img class="burger__opener" src="./img/burger/burger-opener.svg" />
-            <img class="burger__close" src="./img/burger/burger-close.svg" />
-        </button>
-      </li>
+          <div class="logo" id="logo">
+            <a href="#">
+              <img
+                class="logo__image"
+                src="./img/header/logo.svg"
+                alt="Логотип CPS"
+              />
+            </a>
+          </div>
+        </div>
 
-      <li class="logo" id="logo">
-        <a href="#">
-          <img
-            class="logo__image"
-            src="./img/header/logo.svg"
-            alt="Логотип CPS"
-          />
-        </a>
-      </li>
-      
       <header class="header header--mb--xs header--mb--sm">
-          <ul class="header__menu">
+        <ul class="header__menu">
 
 
           <li class="feedback header__feedback">
-
+            <ul class="feedback__list">
+              <li class="feedback__item">
+                <button class="button" id="callModalBtn" type="button">
+                  <img src="./img/feedback/call.svg" class="search-form__icon">
+                </button>
+              </li>
+              <li class="feedback__item">
+                <button class="button" id="feedbackModalBtn" type="button">
+                  <img src="./img/feedback/chat.svg" class="search-form__icon">
+                </button>
+              </li>
+              <li class="feedback__item" id="profile">
+                <button class="button" type="button">
+                  <img src="./img/feedback/profile.svg" class="search-form__icon">
+                </button>
+              </li>
+            </ul>
           </li>
 
           <li class="support">
             <ul class="support__list">
               <li class="support__item">
                 <span class="support__text">Оставить заявку</span>
-                <button class="button">
+                <button class="button" type="button">
                   <img src="./img/header/repair.svg" alt="Оставить заявку" />
                 </button>
               </li>
               <li class="support__item">
                 <span class="support__text">Статус ремонта</span>
-                <button class="button">
+                <button class="button" type="button">
                   <img
                     src="./img/header/check.svg"
                     alt="Проверить статус ремонта"
@@ -66,95 +83,93 @@
       <!-- /.header -->
 
       <div class="page__flex">
-        <aside class="sidebar">
-          <ul class="sidebar__header">
-            <li>
+          <aside class="sidebar">
+            <div class="sidebar__header">
               <button class="button sidebar__search-form">
                 <img src="./img/sidebar/search.svg">
               </button>
-            </li>
-          </ul>
-          <nav class="nav-sidebar">
-            <ul class="nav-sidebar__list">
-              <li class="nav-sidebar__item">
-                <a class="nav-sidebar__link" href="#">
-                  Ремонт техники
-                </a>
-              </li>
-              <li class="nav-sidebar__item">
-                <a class="nav-sidebar__link" href="#">
-                  Услуги и сервисы
-                </a>
-              </li>
-              <li class="nav-sidebar__item">
-                <a class="nav-sidebar__link" href="#">
-                  Корпоративным клиентам
-                </a>
-              </li>
-              <li class="nav-sidebar__item">
-                <a class="nav-sidebar__link" href="#">
-                  Продавцам техники
-                </a>
-              </li>
-              <li class="nav-sidebar__item">
-                <a class="nav-sidebar__link" href="#">
-                  Партнерам
-                </a>
-              </li>
-              <li class="nav-sidebar__item">
-                <a class="nav-sidebar__link" href="#">
-                  Производителям
-                </a>
-              </li>
-              <li class="nav-sidebar__item">
-                <a class="nav-sidebar__link" href="#">
-                  Наши сервисные центры
-                </a>
-              </li>
-              <li class="nav-sidebar__item">
-                <a class="nav-sidebar__link" href="#">
-                  Контакты
-                </a>
-              </li>
-            </ul>
-          </nav>
-
-          <div class="sidebar__footer">
-            <div class="feedback feedback--margin--xs feedback--padding--xs">
-              <ul class="feedback__list">
-                <li class="feedback__item">
-                  <button class="button" id="callModalBtn">
-                    <img src="./img/feedback/call.svg" class="search-form__icon">
-                  </button>
+            </div>
+            <nav class="nav-sidebar">
+              <ul class="nav-sidebar__list">
+                <li class="nav-sidebar__item">
+                  <a class="nav-sidebar__link" href="#">
+                    Ремонт техники
+                  </a>
                 </li>
-                <li class="feedback__item">
-                  <button class="button" id="feedbackModalBtn">
-                    <img src="./img/feedback/chat.svg" class="search-form__icon">
-                  </button>
+                <li class="nav-sidebar__item nav-sidebar__item--active">
+                  <a class="nav-sidebar__link" href="#">
+                    Услуги и сервисы
+                  </a>
                 </li>
-                <li class="feedback__item" id="profile">
-                  <button class="button">
-                    <img src="./img/feedback/profile.svg" class="search-form__icon">
-                  </button>
+                <li class="nav-sidebar__item">
+                  <a class="nav-sidebar__link" href="#">
+                    Корпоративным клиентам
+                  </a>
+                </li>
+                <li class="nav-sidebar__item">
+                  <a class="nav-sidebar__link" href="#">
+                    Продавцам техники
+                  </a>
+                </li>
+                <li class="nav-sidebar__item">
+                  <a class="nav-sidebar__link" href="#">
+                    Партнерам
+                  </a>
+                </li>
+                <li class="nav-sidebar__item">
+                  <a class="nav-sidebar__link" href="#">
+                    Производителям
+                  </a>
+                </li>
+                <li class="nav-sidebar__item">
+                  <a class="nav-sidebar__link" href="#">
+                    Наши сервисные центры
+                  </a>
+                </li>
+                <li class="nav-sidebar__item">
+                  <a class="nav-sidebar__link" href="#">
+                    Контакты
+                  </a>
                 </li>
               </ul>
+            </nav>
+
+            <div class="sidebar__footer">
+              <div class="feedback feedback--margin--xs feedback--padding--xs">
+                <ul class="feedback__list">
+                  <li class="feedback__item">
+                    <button class="button feedback__button" id="callModalBtn" type="button">
+                      <img src="./img/feedback/call.svg" class="search-form__icon">
+                    </button>
+                  </li>
+                  <li class="feedback__item">
+                    <button class="button" id="feedbackModalBtn" type="button">
+                      <img src="./img/feedback/chat.svg" class="search-form__icon">
+                    </button>
+                  </li>
+                  <li class="feedback__item" id="profile">
+                    <button class="button" type="button">
+                      <img src="./img/feedback/profile.svg" class="search-form__icon">
+                    </button>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="contacts contacts--margin--xs contacts--padding--xs">
+                <a class="contacts__e-mail" href="mailto:mail@cps.com">mail@cps.com</a>
+                <a class="contacts__phone" href="tel:8 800 890 8900">8 800 890 8900</a>
+              </div>
+              <div class="language language--margin--xs language--padding--xs">
+                <ul class="language__list">
+                  <li><a class="language__link language__link--active" href="#" lang="ru">RU</a></li>
+                  <li><a class="language__link" href="#" lang="en">EN</a></li>
+                  <li><a class="language__link" href="#" lang="ch">CH</a></li>
+                </ul>
+              </div>
             </div>
 
-            <div class="contacts contacts--margin--xs contacts--padding--xs">
-              <a class="contacts__e-mail" href="mailto:mail@cps.com">mail@cps.com</a>
-              <a class="contacts__phone" href="tel:8 800 890 8900">8 800 890 8900</a>
-            </div>
-            <div class="language language--margin--xs language--padding--xs">
-              <ul class="language__list">
-                <li><a class="language__link language__link--active" href="#" lang="ru">RU</a></li>
-                <li><a class="language__link" href="#" lang="en">EN</a></li>
-                <li><a class="language__link" href="#" lang="ch">CH</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="sidebar__footer-after"></div>
-        </aside> <!-- /.sidebar -->
+            <!-- <div class="sidebar__footer-after"></div> -->
+          </aside> <!-- /.sidebar -->
 
         <div class="page__col">
           <main class="main">
@@ -184,49 +199,43 @@
             </nav> <!-- /.nav -->
 
             <section class="about about--margin">
-              <div class="container">
-                <div class="about__item">
-                  <div class="about__text-box about__text-box--hidden">
-                    <p class="about__text">
-                      Мы являемся авторизованным сервисным центром по ремонту техники
-                      Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
-                      официальной гарантией производителя.
-                    </p>
-                    <p class="about__text">
-                      Мы успешно работаем с 1992 года и заслужили репутацию надежного
-                      партнера, что подтверждает большое количество постоянных
-                      клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям
-                      и, в свою очередь, советуют нас родным и близким.
-                    </p>
-                    <p class="about__text">
-                      Мы являемся авторизованным сервисным центром по ремонту техники
-                      Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
-                      официальной гарантией производителя.
-                    </p>
-                    <p class="about__text">
-                      Мы успешно работаем с 1992 года и заслужили репутацию надежного
-                      партнера, что подтверждает большое количество постоянных
-                      клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям
-                      и, в свою очередь, советуют нас родным и близким.
-                    </p>
-                  </div>
-
-                  <button class="button-more button-more--padding--xs about__button" id="readMore">
-                    <span class="button-more__arrow">
-                      <img src="./img/button-more/arrows.svg" alt="arrows" />
-                    </span>
-                    <span class="button-more__content">Читать далее</span>
-                  </button>
+              <div class="about__inner">
+                <div class="about__text-box about__text-box--hidden">
+                  <p class="about__text">
+                    Мы являемся авторизованным сервисным центром по ремонту техники
+                    Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
+                    официальной гарантией производителя.
+                  </p>
+                  <p class="about__text">
+                    Мы успешно работаем с 1992 года и заслужили репутацию надежного
+                    партнера, что подтверждает большое количество постоянных
+                    клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям
+                    и, в свою очередь, советуют нас родным и близким.
+                  </p>
+                  <p class="about__text">
+                    Мы являемся авторизованным сервисным центром по ремонту техники
+                    Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
+                    официальной гарантией производителя.
+                  </p>
+                  <p class="about__text">
+                    Мы успешно работаем с 1992 года и заслужили репутацию надежного
+                    партнера, что подтверждает большое количество постоянных
+                    клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям
+                    и, в свою очередь, советуют нас родным и близким.
+                  </p>
                 </div>
+
+                <button class="button-more button-more--padding--xs about__button" id="readMore">
+                  <span class="button-more__arrow">
+                    <img src="./img/button-more/arrows.svg" alt="arrows" />
+                  </span>
+                  <span class="button-more__content">Читать далее</span>
+                </button>
               </div>
+
               <div class="about__image-box">
-                <picture>
-                    <source media="(max-width: 320px)" srcset="./img/about/about__image_320x176.png" type="image/png">
-                    <source media="(min-width: 596px)" srcset="./img/about/about__image_360x260.png" type="image/png">
-                    <source media="(min-width: 1020px)" srcset="./img/about/about__image_530x383.png" type="image/png">
-                    <img class="about__image" src="./img/about/about__image_530x383.png" alt="Логотип CPS">
-                </picture>
-            </div>
+                <img class="about__image" src="./img/about/about__image_530x383.png" alt="Логотип CPS">
+              </div>
             </section>
             <!-- /.about -->
 

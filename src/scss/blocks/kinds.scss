@@ -11,6 +11,8 @@
         margin: 0;
 
         .kinds__link {
+          @extend %hover-card;
+
           display: flex;
           justify-content: space-between;
           align-items: flex-end;

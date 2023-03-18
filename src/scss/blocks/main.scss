@@ -43,16 +43,16 @@
       }
     }
 
-    @include breakpoint(768px) {
+    @include breakpoint(1440px) {
       gap: 30px;
     }
-
 
   }
 
   @include breakpoint(1120px) {
-    transform: translateY(-100px);
-    margin-top: 42px;
+    // transform: translateY(-100px);
+    margin-top: -46px;
+    margin-left: 320px;
   }
 
 
