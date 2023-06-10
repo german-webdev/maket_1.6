@@ -11,14 +11,30 @@ export default function brandsSwiper() {
         brandsSwiper = new Swiper('.brands__grid', {
           direction: 'horizontal',
           width: 320,
-          // spaceBetween: 16,
+          spaceBetween: 0,
           slidesPerView: 1.25,
           speed: 300,
           cssMode: true,
+          loop: true,
+          autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+          },
 
           pagination: {
             el: ".swiper-pagination",
             clickable: true,
+          },
+          on: {
+            init() {
+              this.el.addEventListener('mouseenter', () => {
+                this.autoplay.stop();
+              });
+
+              this.el.addEventListener('mouseleave', () => {
+                this.autoplay.start();
+              });
+            }
           },
         });
       }

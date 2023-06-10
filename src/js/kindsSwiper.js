@@ -15,6 +15,11 @@ export default function kindsSwiper() {
           slidesPerView: 1.25,
           speed: 300,
           cssMode: true,
+          loop: true,
+          autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+          },
 
           pagination: {
             el: ".swiper-pagination",
